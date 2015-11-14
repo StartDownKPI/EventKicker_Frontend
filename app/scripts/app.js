@@ -27,6 +27,18 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .state('createEvent', {
+		url: '/new',
+        templateUrl: 'views/create.html',
+      })
+      .state('events', {
+		url: '/events',
+        templateUrl: 'views/events.html',
+      })
+      .state('login', {
+		url: '/login',
+        templateUrl: 'views/sign-in.html',
+      })
       .state('about', {
 		url: '/about',
         templateUrl: 'views/about.html',

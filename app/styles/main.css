@@ -107,47 +107,53 @@ a {
 	padding-top: 20px;
 }
 
-.events-grid .events-grid-item .thumbnail {
+.events-grid .deckgrid .thumbnail {
 	background-color: #fefefe;
 	border: 2px solid #fafafa;
 	box-shadow: 0px 1px 5px rgba(35,25,25,0.3);
 	border-radius: 5px;
 }
 
-.events-grid .events-grid-item .thumbnail .caption {
+.events-grid .deckgrid .thumbnail .caption {
 	padding: 0 10px;
 }
 
-.events-grid .events-grid-item .thumbnail .caption h3 {
+.events-grid .deckgrid .thumbnail .caption h3 {
 	color: #444;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 0;
 }
 
-.events-grid .events-grid-item .thumbnail .caption p {
+.events-grid .deckgrid .thumbnail .caption p {
 	font-size: 13px;
 	color: #333;
 }
 
-.events-grid .events-grid-item .thumbnail .caption hr {
+.events-grid .deckgrid .thumbnail .caption hr {
 	margin: 5px 0;
 }
 
 @media screen and (max-width: 480px){
-	.events-grid[data-columns]::before {
+	.deckgrid[deckgrid]::before {
 		content: '2 .col-xs-6';
+		font-size: 0;
+		visibility: hidden;
 	}
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px){
-	.events-grid[data-columns]::before {
+	.deckgrid[deckgrid]::before {
 		content: '2 .col-xs-6';
+		font-size: 0;
+		visibility: hidden;
 	}
 }
 
 @media screen and (min-width: 769px){
-	.events-grid[data-columns]::before {
+	.deckgrid[deckgrid]::before {
 		content: '4 .col-xs-3';
+		font-size: 0;
+		visibility: hidden;
 	}
 }

@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ui.router',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+	'akoenig.deckgrid'
   ])
   .config(function ($stateProvider ,$urlRouterProvider) {
 	  $urlRouterProvider.otherwise('/');
@@ -34,6 +35,7 @@ angular
       .state('events', {
 		url: '/events',
         templateUrl: 'views/events.html',
+		controller: 'EventsController'
       })
       .state('login', {
 		url: '/login',

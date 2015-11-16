@@ -92,6 +92,16 @@ a {
 
 }
 
+.events-search form select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: none;
+	background: none;
+	color: #e34b4b;
+	cursor: pointer;
+}
+
 .events-search-form .help-block {
 	font-size: 13px;
 	margin-bottom: 0px;

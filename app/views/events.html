@@ -9,15 +9,25 @@
 		</div>
 
 		<div class="row events-search">
-			<form>
+			<form class="form-horizontal">
 				<div style="width:100%;" class="input-group">
-					<input type="text" class="form-control" placeholder="Search for events...">
+					<input type="text" class="form-control" placeholder="Search for events..." ng-model="filterBy.search"> 
 					<span style="font-size: 14px; line-height: 1.4; padding: 0 12px;" class="input-group-addon">
 						in 
-						<select>
-							<option>All categories</option>
+						<select
+							name="category"
+							ng-model="filterBy.category"
+							ng-options="c.name for c in categories">
 						</select>
 					</span>
+				</div>
+					<div class="form-group col-sm-3">
+						<label class="control-label">from-to date: </label>
+
+						<input ng-model="filterBy.startDate" type="date" class="form-control" id="inputDateFrom" >
+						
+						<input ng-model="filterBy.endDate" type="date" class="form-control" id="inputDateTo">
+					</div>
 				</div>
 			</form>
 		</div>
@@ -26,7 +36,7 @@
 
 	<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 		<div class="row events-grid">
-			<div class="media event-item" ng-repeat="event in events">
+			<div class="media event-item" ng-repeat="event in events | filter: {name : filterBy.search} | events:filterBy">
 				<div class="media-left">
 					<div class="event-thumb" ng-style="
 						{'background-image':'url({{event.pictureUrl}})'}">
@@ -34,7 +44,7 @@
 				</div>
 				<div class="media-body">
 					<h4 class="media-heading">
-						{{event.name | limitTo: 50}} <small>{{event.timeScheduled}}</small>
+						{{event.name | limitTo: 50}} <small>{{event.timeScheduled | date:'mediumDate'}}</small>
 					</h4>
 					<span class="description">
 						{{event.description | limitTo: 100 }}...
@@ -42,6 +52,7 @@
 					<div class="labels">
 						<span class="small text-muted">Author: authorName</span>
 						<span class="small text-muted">Partcipants: {{ event.participantIds.length }}</span>
+						<span class="small text-muted">Category: {{ event.category.name }}</span>
 					</div>
 				</div>
 			</div>

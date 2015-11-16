@@ -15,8 +15,7 @@ angular
     'ngResource',
     'ui.router',
     'ngSanitize',
-    'ngTouch',
-	'akoenig.deckgrid'
+    'ngTouch'
   ])
   .config(function ($stateProvider ,$urlRouterProvider) {
 	  $urlRouterProvider.otherwise('/');

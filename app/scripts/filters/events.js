@@ -16,6 +16,6 @@ angular.module('ekApp')
 
 			return categoryCond && dateCond; 
 
-		} )
-	}
-})
+		} );
+	};
+});

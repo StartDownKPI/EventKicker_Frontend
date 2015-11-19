@@ -1,21 +1,12 @@
 'use strict';
 
-angular.module('ekApp')
-.service('categories', function(){
-	this.query = function(){
-		return [
-			{
-				name: 'All'
-			},
-			{
-				name: 'Sport',
-			},
-			{
-				name: 'Music'
-			},
-			{
-				name: 'Politics'
+angular
+	.module('ekApp')
+	.factory('Category', function($resource){
+		return $resource('/api/categories/:id', { id: '@id' }, {
+			'query':{
+				method: 'GET',
+				isArray: true
 			}
-		];
-	};
-});
+		} );
+	});

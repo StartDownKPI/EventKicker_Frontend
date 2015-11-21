@@ -12,8 +12,6 @@ angular.module('ekApp')
 				(filterBy.endDate >= element.timeScheduled)
 			);
 			
-			console.log(index + ' , dateCond: ' + dateCond);
-
 			return categoryCond && dateCond; 
 
 		} );

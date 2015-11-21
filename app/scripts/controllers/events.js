@@ -6,10 +6,8 @@ angular.module('ekApp')
 	$scope.serverCategories = Category.query(function(){
 		$scope.categories = $scope.categories.concat($scope.serverCategories);
 	});
-	console.log($scope.categories);
 
 	$scope.events = Event.query();
-	console.log($scope.events);
 
 	$scope.filterBy = {
 		search: '',
@@ -17,4 +15,16 @@ angular.module('ekApp')
 		startDate: new Date(2015,4,1),
 		endDate: new Date(2016,1,14)
 	};
+
+	$scope.orderProperties = [
+		{
+			name: 'Popularity',
+			value: '-participantIds.length'
+		},
+		{
+			name: 'Start date',
+			value: 'timeScheduled'
+		}
+	];
+
 });

@@ -15,7 +15,7 @@ angular
 				description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 				pictureUrl: '/images/sample1.jpg',
 				userCreatedId: 3,
-				participantIds: [1,3,64,233,12,1314,4134,656,735,35],
+				participantIds: [1,3,64,2,4134,656,735,35],
 				itemsNeeded: [
 					'3 Guitars',
 					'Microphones',
@@ -34,7 +34,7 @@ angular
 				description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 				pictureUrl: '/images/sample2.jpg',
 				userCreatedId: 3,
-				participantIds: [1,3,64,233,12,1314,4134,656,735,35],
+				participantIds: [1,3,64,214,4134,656,735,35],
 				itemsNeeded: [
 					'3 Guitars',
 					'Microphones',
@@ -53,7 +53,7 @@ angular
 				description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 				pictureUrl: '/images/sample3.jpg',
 				userCreatedId: 3,
-				participantIds: [1,3,64,233,12,1314,4134,656,735,35],
+				participantIds: [1,3,64,26,735,35],
 				itemsNeeded: [
 					'3 Guitars',
 					'Microphones',
@@ -72,7 +72,7 @@ angular
 				description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 				pictureUrl: '/images/sample4.jpg',
 				userCreatedId: 3,
-				participantIds: [1,3,64,233,12,1314,4134,656,735,35],
+				participantIds: [1,3,633,12,1314,4134,656,735,35],
 				itemsNeeded: [
 					'3 Guitars',
 					'Microphones',

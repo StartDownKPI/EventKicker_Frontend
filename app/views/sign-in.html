@@ -1,1 +1,45 @@
-<p>This is the <strong>Sign In</strong> view </p>
+<div style="margin-top:40px" class="container">
+	<div class="col-md-6 col-md-offset-3">
+
+		<form class="form" name="loginForm" novalidate ng-submit="login()" >
+			
+			<div class="form-group" 
+				ng-class="{ 'has-error' : loginForm.email.$invalid && loginForm.email.$dirty,
+							'has-success' : loginForm.email.$valid && loginForm.email.$dirty} ">
+				
+				<label class="control-label">Email</label>
+
+				<input type="email" name="email" class="form-control" 
+					ng-model="user.email" required custom-focus />
+				
+				<p class="help-block" 
+					ng-show="loginForm.email.$invalid && loginForm.email.$dirty && !loginForm.email.$focused">
+					Please, enter correct email
+				</p>
+
+			</div>
+
+			<div class="form-group"
+				ng-class="{ 'has-error' : loginForm.password.$invalid && loginForm.password.$dirty,
+							'has-success' : loginForm.password.$valid && loginForm.password.$dirty} ">
+
+				<label class="control-label">Password</label>
+				<input type="password" name="password" class="form-control"
+					ng-model="user.password" required custom-focus />
+				<p class="help-block" 
+					ng-show="loginForm.password.$invalid && loginForm.password.$dirty && !loginForm.password.$focused">
+					Please, enter correct password
+				</p>
+			
+			</div>
+
+			<div class="form-group">
+			
+				<button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid" >Log In</button>
+			
+			</div>
+
+		</form>
+	
+	</div>
+</div>

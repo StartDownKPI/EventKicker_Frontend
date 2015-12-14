@@ -40,6 +40,7 @@ angular
       .state('login', {
 		url: '/login',
         templateUrl: 'views/sign-in.html',
+		controller: 'LoginController'
       })
       .state('about', {
 		url: '/about',

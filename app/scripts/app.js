@@ -31,12 +31,18 @@ angular
       .state('createEvent', {
 		url: '/new',
         templateUrl: 'views/create.html',
+		controller: 'EventsController'
       })
       .state('events', {
 		url: '/events',
         templateUrl: 'views/events.html',
 		controller: 'EventsController'
       })
+	  .state('event', {
+		  url: '/events/:id',
+		  templateUrl: 'views/event.html',
+		  controller: 'EventController'
+	  })
       .state('login', {
 		url: '/login',
         templateUrl: 'views/sign-in.html',

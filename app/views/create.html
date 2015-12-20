@@ -21,7 +21,7 @@
 			</div>
 
 			<div class="form-group" 
-				ng-class="{ 'has-error' : newEventForm.eventDate.$invalid && newEventForm.eventDate.$dirty,
+				ng-class="{ 'has-error' : newEventForm.eventDate.$error.datetimelocal && newEventForm.eventDate.$dirty,
 							'has-success' : newEventForm.eventDate.$valid && newEventForm.eventDate.$dirty	} ">
 				
 				<label class="control-label">Date/Time</label>
@@ -30,7 +30,7 @@
 					ng-model="newEvent.timeScheduled" required custom-focus />	
 				
 				<p class="help-block" 
-					ng-show="newEventForm.eventName.$invalid && newEventForm.eventName.$dirty && !newEventForm.eventName.$focused">
+					ng-show="newEventForm.eventDate.$error.datetimelocal || newEventForm.eventDate.$error.required">
 					Please, enter correct date
 				</p>
 

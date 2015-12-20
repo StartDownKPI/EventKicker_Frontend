@@ -47,13 +47,19 @@
 		<div class="row events-grid">
 			<div class="media event-item" ng-repeat="event in events | orderBy: order | filter: {name : filterBy.search} | events:filterBy">
 				<div class="media-left">
-					<div class="event-thumb" ng-style="
-						{'background-image':'url({{event.pictureUrl}})'}">
-					</div>
+					<a ui-sref="event">
+						<div class="event-thumb" ng-style="
+							{'background-image':'url({{event.pictureUrl}})'}">
+						</div>
+					</a>
 				</div>
 				<div class="media-body">
 					<h4 class="media-heading">
-						{{event.name | limitTo: 50}} <small>{{event.timeScheduled | date:'mediumDate'}}</small>
+						<a ui-sref="event({ id: event.id })">
+							{{ event.id }}
+							{{event.name | limitTo: 50}}
+						</a>
+						<small>{{event.timeScheduled | date:'mediumDate'}}</small>
 					</h4>
 					<span class="description">
 						{{event.description | limitTo: 100 }}...

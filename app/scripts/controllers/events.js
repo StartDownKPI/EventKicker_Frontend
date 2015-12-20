@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('ekApp')
-.controller('EventsController', function($scope, Event, Category){
+.controller('EventsController', function($scope, $stateParams, Event, Category){
+
 	$scope.categories = [{name: 'All'}];
 	$scope.serverCategories = Category.query(function(){
 		$scope.categories = $scope.categories.concat($scope.serverCategories);
@@ -26,5 +27,7 @@ angular.module('ekApp')
 			value: 'timeScheduled'
 		}
 	];
+
+	console.log($stateParams.id);
 
 });

@@ -24,7 +24,7 @@ angular
 				]
 			},
 			{
-				id: 0,
+				id: 1,
 				name: 'Test Event',
 				category: {
 					name: 'Sport'
@@ -43,7 +43,7 @@ angular
 				]
 			},
 			{
-				id: 0,
+				id: 2,
 				name: 'Test Event',
 				category: {
 					name: 'Politics'
@@ -62,7 +62,7 @@ angular
 				]
 			},
 			{
-				id: 0,
+				id: 3,
 				name: 'Test Event',
 				category: {
 					name: 'Politics'
@@ -85,6 +85,9 @@ angular
 		return {
 		  get: function(){
 			  return result;
+		  },
+		  getById: function(){
+			  return result[0];
 		  }
 		};
 	})

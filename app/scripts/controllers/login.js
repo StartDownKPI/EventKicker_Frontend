@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('ekApp')
 	.controller('LoginController', function($scope){
 		$scope.login = function(){

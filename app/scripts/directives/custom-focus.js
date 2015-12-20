@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('ekApp')
 .directive('customFocus', function(){
 	return {

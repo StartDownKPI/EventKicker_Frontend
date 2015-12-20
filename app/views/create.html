@@ -1,1 +1,81 @@
-<p>This is the <strong>New Event</strong> view.</p>
+<div class="container">
+	<h2 class="text-center">New Event</h2>
+	<div class="col-md-6 col-md-offset-3">
+
+		<form class="form" name="newEventForm" novalidate ng-submit="tryAddNewEvent()" >
+
+			<div class="form-group" 
+				ng-class="{ 'has-error' : newEventForm.eventName.$invalid && newEventForm.eventName.$dirty,
+							'has-success' : newEventForm.eventName.$valid && newEventForm.eventName.$dirty} ">
+				
+				<label class="control-label">Name</label>
+
+				<input type="text" name="eventName" class="form-control" 
+					ng-model="newEvent.name" required custom-focus />	
+				
+				<p class="help-block" 
+					ng-show="newEventForm.eventName.$invalid && newEventForm.eventName.$dirty && !newEventForm.eventName.$focused">
+					Please, enter correct name
+				</p>
+
+			</div>
+
+			<div class="form-group" 
+				ng-class="{ 'has-error' : newEventForm.eventDate.$invalid && newEventForm.eventDate.$dirty,
+							'has-success' : newEventForm.eventDate.$valid && newEventForm.eventDate.$dirty	} ">
+				
+				<label class="control-label">Date/Time</label>
+
+				<input type="datetime-local" name="eventDate" class="form-control" 
+					ng-model="newEvent.timeScheduled" required custom-focus />	
+				
+				<p class="help-block" 
+					ng-show="newEventForm.eventName.$invalid && newEventForm.eventName.$dirty && !newEventForm.eventName.$focused">
+					Please, enter correct date
+				</p>
+
+			</div>
+
+			<div class="form-group" 
+				ng-class="{ 'has-error' : newEventForm.eventDescr.$invalid && newEventForm.eventDescr.$dirty,
+							'has-success' : newEventForm.eventDescr.$valid && newEventForm.eventDescr.$dirty	} ">
+				
+				<label class="control-label">Description</label>
+
+				<textarea rows="5" name="eventDescr" class="form-control" 
+					ng-model="newEvent.descr" required custom-focus />	
+				
+				<p class="help-block" 
+					ng-show="newEventForm.eventDescr.$invalid && newEventForm.eventDescr.$dirty && !newEventForm.eventDescr.$focused">
+					Please, enter correct description
+				</p>
+
+			</div>
+
+			<div class="form-group" 
+				ng-class="{ 'has-error' : newEventForm.eventPicture.$invalid && newEventForm.eventPicture.$dirty,
+							'has-success' : newEventForm.eventPicture.$valid && newEventForm.eventPicture.$dirty	} ">
+				
+				<label class="control-label">Picture</label>
+
+				<input type=file name="eventPicture" class="form-control" 
+					ng-model="newEvent.picture" required custom-focus />	
+				
+				<p class="help-block" 
+					ng-show="newEventForm.eventName.$invalid && newEventForm.eventName.$dirty && !newEventForm.eventName.$focused">
+					Please, select file
+				</p>
+
+			</div>
+
+			<div class="form-group">
+			
+				<button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid" >Add new event</button>
+			
+			</div>
+
+		</form>
+	
+	</div>
+</div>
+

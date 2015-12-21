@@ -8,7 +8,7 @@ angular
 		$scope.helpData = {
 			senderId: 2,
 			description: "Just raw text(())",
-			destinationUsername: "infm",
+			destinationUsername: "agony404@gmail.com",
 			eventId: parseInt($stateParams.id, 10)
 		};
 

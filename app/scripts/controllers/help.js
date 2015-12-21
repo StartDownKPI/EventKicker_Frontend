@@ -14,7 +14,7 @@ angular
 
 		$scope.addItem = function(){
 			console.log($scope.helpData);
-			HelpSuggest.save(helpData).$promise.then(
+			HelpSuggest.save($scope.helpData).$promise.then(
 				function(res){
 					console.log("Request sended");
 				}

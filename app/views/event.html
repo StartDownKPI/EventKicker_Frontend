@@ -12,10 +12,10 @@
 				<div class="media">
 					<div class="media-left">
 						<div class="event-thumb"
-							style="background-image: url(/images/sample1.jpg)"></div>
+							style="background-image: url(images/ava.png)"></div>
 					</div>
 					<div class="media-body">
-						<p class="description">Here goes some description of event.Here goes some description of eventHere goes some description of event</p>
+						<p class="description">{{ currEvent.description || 'No description yet...' }}</p>
 					</div>
 				</div>
 					
@@ -24,15 +24,15 @@
 				<ul class="list-group">
 					<li class="list-group-item">
 						<strong>Where: </strong>
-						Kyiv
+						{{ currEvent.placeScheduled || 'No place yet...' }}
 					</li>
 					<li class="list-group-item">
 						<strong>When: </strong>
-						12-04-2015
+						{{ currEvent.timeScheduled || 'No time yet... '}}
 					</li>
 					<li class="list-group-item">
 						<strong>Participants: </strong>
-						123
+						{{ 'No info yet' }}
 						
 					</li>
 				</ul>

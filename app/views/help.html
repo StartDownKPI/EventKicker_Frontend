@@ -1,0 +1,21 @@
+You gonna help to : {{ currEvent.name }}
+
+<h3>List of items needed</h3>
+
+<ul>
+	<li ng-repeat="item in currEventItems">
+		{{ item.name }}
+	</li>
+</ul>
+
+<form name="newHelpForm">
+	<div class="form-group">
+		<label class="control-label">Select item</label>
+		<select name="itemForHelp">
+			<option ng-repeat="item in currEventItems" 
+				value="{{ item.name }}">
+				{{ item.name }}
+				</option>
+		</select>
+	</div>
+</form>

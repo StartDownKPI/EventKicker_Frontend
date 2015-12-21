@@ -32,6 +32,11 @@ angular
         templateUrl: 'views/create.html',
 		controller: 'EventsController'
       })
+	  .state('help', {
+		  url: '/help/:id',
+		  templateUrl: 'views/help.html',
+		  controller: 'HelpSuggestController'
+	  })
       .state('events', {
 		url: '/events',
         templateUrl: 'views/events.html',

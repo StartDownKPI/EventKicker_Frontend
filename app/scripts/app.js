@@ -42,6 +42,11 @@ angular
 		  templateUrl: 'views/event.html',
 		  controller: 'EventController'
 	  })
+	  .state('user', {
+		  url: '/users/:userName',
+		  templateUrl: 'views/user.html',
+		  controller: 'UserController'
+	  })
       .state('login', {
 		url: '/login',
         templateUrl: 'views/sign-in.html',

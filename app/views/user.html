@@ -4,7 +4,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
-					{{ currEvent.name || 'No name yet...' }}
+					{{ currUser.name || 'No name yet...' }}
 				</h3>
 			</div>
 			<div class="panel-body">
@@ -15,31 +15,9 @@
 							style="background-image: url(images/ava.png)"></div>
 					</div>
 					<div class="media-body">
-						<p class="description">{{ currEvent.description || 'No description yet...' }}</p>
+						<p class="description">{{ currUser.username || 'No username yet...' }}</p>
 					</div>
 				</div>
-					
-				<h3>Details</h3>
-
-				<ul class="list-group">
-					<li class="list-group-item">
-						<strong>Author: </strong>
-						{{ currEventAuthor.name || 'No author yet...' }}
-					</li>
-					<li class="list-group-item">
-						<strong>Where: </strong>
-						{{ currEvent.placeScheduled || 'No place yet...' }}
-					</li>
-					<li class="list-group-item">
-						<strong>When: </strong>
-						{{ currEvent.timeScheduled | date:'mediumDate' || 'No time yet... '}}
-					</li>
-					<li class="list-group-item">
-						<strong>Participants: </strong>
-						{{ 'No info yet' }}
-						
-					</li>
-				</ul>
 				
 				<h3>Items needed</h3>
 				<div class="table-responsive">
@@ -74,3 +52,4 @@
 		</div>
 	</div>
 </div>
+

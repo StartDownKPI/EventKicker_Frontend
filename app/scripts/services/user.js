@@ -3,9 +3,9 @@
 angular
 	.module('ekApp')
 	.factory('User', function($resource){
-		return $resource('http://way42.ru/api/users/:id',
+		return $resource('http://way42.ru/api/users/:userName',
 						 {
-							 id: '@id'
+							 userName: '@userName'
 						 },
 						 {
 							 getAll: { method:'GET', 

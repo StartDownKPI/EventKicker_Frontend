@@ -11,7 +11,7 @@ You gonna help to : {{ currEvent.name }}
 <form name="newHelpForm" ng-submit="addItem()">
 	<div class="form-group">
 		<label class="control-label">Select item</label>
-		<select multiple ng-model="helpData.items" name="itemForHelp">
+		<select multiple ng-model="helpData.itemIds" name="itemForHelp">
 			<option ng-repeat="item in currEventItems" 
 			value="{{item.id | num}}">
 				{{ item.name }}

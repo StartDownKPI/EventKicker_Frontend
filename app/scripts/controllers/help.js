@@ -2,7 +2,7 @@
 
 angular
 	.module('ekApp')
-	.controller('HelpSuggestController', function($scope,$stateParams, Event, Item){
+	.controller('HelpSuggestController', function($scope,$stateParams, Event, Item, HelpSuggest){
 		$scope.currEvent = {};
 		$scope.currEventItems = [];
 		$scope.helpData = {
@@ -14,6 +14,11 @@ angular
 
 		$scope.addItem = function(){
 			console.log($scope.helpData);
+			HelpSuggest.save(helpData).$promise.then(
+				function(res){
+					console.log("Request sended");
+				}
+			);
 		};
 
 		Event.get({id:$stateParams.id})

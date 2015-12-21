@@ -68,4 +68,9 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       });
-  });
+  })
+  	.filter('num', function() {
+    	return function(input) {
+     		return parseInt(input, 10);
+    };
+});

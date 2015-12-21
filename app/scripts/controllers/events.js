@@ -2,17 +2,18 @@
 
 angular.module('ekApp')
 .controller('EventsController', function($scope, $stateParams, Event, Category){
+	
+	$scope.events = [];
 
-	$scope.categories = [{name: 'All'}];
-	$scope.serverCategories = Category.query(function(){
-		$scope.categories = $scope.categories.concat($scope.serverCategories);
+	Event.getAll().$promise.then(function(result){
+		if (result.success === true) {
+			$scope.events = result.multiple;
+			console.log($scope.events[0]);
+		}
 	});
-
-	$scope.events = Event.query();
 
 	$scope.filterBy = {
 		search: '',
-		category: $scope.categories[0],
 		startDate: new Date(2015,4,1),
 		endDate: new Date(2016,1,14)
 	};
@@ -27,7 +28,5 @@ angular.module('ekApp')
 			value: 'timeScheduled'
 		}
 	];
-
-	console.log($stateParams.id);
 
 });

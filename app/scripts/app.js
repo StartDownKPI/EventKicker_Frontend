@@ -15,8 +15,7 @@ angular
     'ngResource',
     'ui.router',
     'ngSanitize',
-    'ngTouch',
-	'ngMockE2E',
+    'ngTouch'
   ])
   .config(function ($stateProvider ,$urlRouterProvider) {
 	  $urlRouterProvider.otherwise('/');

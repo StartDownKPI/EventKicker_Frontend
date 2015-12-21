@@ -7,8 +7,6 @@ angular
 				  mockGetAllCategories
 				 ){
 		$httpBackend.whenGET(/views\/.*/).passThrough();
-		$httpBackend.whenGET(/events$/)
-			.respond(mockGetAllEvents.get());
 		$httpBackend.whenGET(/categories$/)
 			.respond(mockGetAllCategories.get());
 	});

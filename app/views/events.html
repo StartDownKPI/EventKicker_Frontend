@@ -14,11 +14,11 @@
 					<input type="text" class="form-control" placeholder="Search for events..." ng-model="filterBy.search"> 
 					<span style="font-size: 14px; line-height: 1.4; padding: 0 12px;" class="input-group-addon">
 						in 
-						<select
-							name="category"
-							ng-model="filterBy.category"
-							ng-options="c.name for c in categories">
-						</select>
+						<!-- <select -->
+						<!-- 	name="category" -->
+						<!-- 	ng&#45;model="filterBy.category" -->
+						<!-- 	ng&#45;options="c.name for c in categories"> -->
+						<!-- </select> -->
 					</span>
 				</div>
 				<div class="form-group col-sm-3">
@@ -45,18 +45,17 @@
 
 	<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 		<div class="row events-grid">
-			<div class="media event-item" ng-repeat="event in events | orderBy: order | filter: {name : filterBy.search} | events:filterBy">
+			<div class="media event-item" ng-repeat="event in events | orderBy: order | filter: {name: filterBy.search}">
 				<div class="media-left">
 					<a ui-sref="event">
 						<div class="event-thumb" ng-style="
-							{'background-image':'url({{event.pictureUrl}})'}">
+							{'background-image':'url(images/ava.png)'}">
 						</div>
 					</a>
 				</div>
 				<div class="media-body">
 					<h4 class="media-heading">
 						<a ui-sref="event({ id: event.id })">
-							{{ event.id }}
 							{{event.name | limitTo: 50}}
 						</a>
 						<small>{{event.timeScheduled | date:'mediumDate'}}</small>
@@ -67,7 +66,7 @@
 					<div class="labels">
 						<span class="small text-muted">Author: authorName</span>
 						<span class="small text-muted">Partcipants: {{ event.participantIds.length }}</span>
-						<span class="small text-muted">Category: {{ event.category.name }}</span>
+						<!-- <span class="small text&#45;muted">Category: {{ event.category.name }}</span> -->
 					</div>
 				</div>
 			</div>

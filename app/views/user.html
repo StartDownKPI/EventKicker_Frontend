@@ -32,8 +32,8 @@
 						<tbody>
 							<tr ng-repeat="userEvent in currUserEvents">
 								<td>{{ userEvent.name }}</td>
-								<td>{{ userEvent.timeCreated }}</td>
-								<td>{{ userEvent.timeScheduled }}</td>
+								<td>{{ userEvent.timeCreated | date:'mediumDate' }}</td>
+								<td>{{ userEvent.timeScheduled | date:'mediumDate' }}</td>
 							</tr>
 						</tbody>
 					</table>

@@ -31,7 +31,10 @@
 						</thead>
 						<tbody>
 							<tr ng-repeat="userEvent in currUserEvents">
-								<td>{{ userEvent.name }}</td>
+								<td>
+									<a ui-sref="event({id:userEvent.id})">
+										{{ userEvent.name }}</a>
+								</td>
 								<td>{{ userEvent.timeCreated | date:'mediumDate' }}</td>
 								<td>{{ userEvent.timeScheduled | date:'mediumDate' }}</td>
 							</tr>

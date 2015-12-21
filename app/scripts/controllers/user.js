@@ -5,7 +5,7 @@ angular
 	.controller('UserController', function($scope,$stateParams, User, Event){
 		$scope.currUser = {};
 
-		User.get({userName:$stateParams.userName})
+		User.get({id:$stateParams.id})
 		.$promise.then(function(res){
 			if (res.success) {
 				$scope.currUser = res.single;

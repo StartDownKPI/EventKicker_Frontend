@@ -43,7 +43,7 @@ angular
 		  controller: 'EventController'
 	  })
 	  .state('user', {
-		  url: '/users/:userName',
+		  url: '/users/:id',
 		  templateUrl: 'views/user.html',
 		  controller: 'UserController'
 	  })

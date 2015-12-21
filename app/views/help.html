@@ -8,14 +8,19 @@ You gonna help to : {{ currEvent.name }}
 	</li>
 </ul>
 
-<form name="newHelpForm">
+<form name="newHelpForm" ng-submit="addItem()">
 	<div class="form-group">
 		<label class="control-label">Select item</label>
-		<select name="itemForHelp">
+		<select multiple ng-model="helpData.items" name="itemForHelp">
 			<option ng-repeat="item in currEventItems" 
 				value="{{ item.name }}">
 				{{ item.name }}
 				</option>
 		</select>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary" >
+			Send
+		</button>
 	</div>
 </form>

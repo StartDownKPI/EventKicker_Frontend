@@ -16,7 +16,7 @@ angular.module('ekApp')
 		.then(function(result){
 			if (result){
 				$scope.currEventAuthor = User.get(
-					{ userName:result.authorId }
+					{ id:result.authorId }
 				).
 					$promise.then(function(res){
 						if (res.success) {

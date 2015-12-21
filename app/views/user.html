@@ -19,30 +19,21 @@
 					</div>
 				</div>
 				
-				<h3>Items needed</h3>
+				<h3>User events</h3>
 				<div class="table-responsive">
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th>Item Name</th>
-								<th>Number</th>
-								<th>Help</th>
+								<th>Event</th>
+								<th>Created</th>
+								<th>Scheduled</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>Tea</td>
-								<td>21</td>
-								<td>
-									<a href="">I can help</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Guitar</td>
-								<td>2</td>
-								<td>
-									<a href="">I can help</a>
-								</td>
+							<tr ng-repeat="userEvent in currUserEvents">
+								<td>{{ userEvent.name }}</td>
+								<td>{{ userEvent.timeCreated }}</td>
+								<td>{{ userEvent.timeScheduled }}</td>
 							</tr>
 						</tbody>
 					</table>

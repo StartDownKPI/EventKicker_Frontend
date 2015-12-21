@@ -13,7 +13,7 @@ You gonna help to : {{ currEvent.name }}
 		<label class="control-label">Select item</label>
 		<select multiple ng-model="helpData.items" name="itemForHelp">
 			<option ng-repeat="item in currEventItems" 
-				value="{{ item.name }}">
+				value="{{ item.id }}">
 				{{ item.name }}
 				</option>
 		</select>

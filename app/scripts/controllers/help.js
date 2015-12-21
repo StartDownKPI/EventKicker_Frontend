@@ -15,7 +15,7 @@ angular
 		$scope.addItem = function(){
 			console.log($scope.helpData);
 			for (var i in $scope.helpData.itemIds) {
-				itemIds[i] = parseInt(itemids, 10);
+				$scope.helpData.itemIds[i] = parseInt(itemids, 10);
 			}
 			HelpSuggest.save($scope.helpData).$promise.then(
 				function(res){

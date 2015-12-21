@@ -9,11 +9,14 @@ angular
 			senderId: 2,
 			description: "Just raw text(())",
 			destinationUsername: "infm",
-			eventId: $stateParams.id
+			eventId: parseInt($stateParams.id, 10)
 		};
 
 		$scope.addItem = function(){
 			console.log($scope.helpData);
+			for (var i in $scope.helpData.itemIds) {
+				itemIds[i] = parseInt(itemids, 10);
+			}
 			HelpSuggest.save($scope.helpData).$promise.then(
 				function(res){
 					console.log("Request sended");

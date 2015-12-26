@@ -7,13 +7,12 @@ angular
 		$scope.currEventItems = [];
 		$scope.helpData = {
 			senderId: 2,
-			description: "",
+			description: "Just raw text(())",
 			destinationUsername: "agony404@gmail.com",
 			eventId: parseInt($stateParams.id, 10)
 		};
-	
-		$scope.currEventSuggestions = [];
-		$scope.resMsg = "";
+
+		$scope.resMsgg = "";
 
 		$scope.addItem = function(){
 			console.log($scope.helpData);
@@ -23,8 +22,7 @@ angular
 			HelpSuggest.save($scope.helpData).$promise.then(
 				function(res){
 					console.log("Request sended");
-					$scope.currEventSuggestions.push($scope.helpData);
-					$scope.resMsg = "Event's author will receive oyur help suggest as soos as possible! Thank You :)";
+					$scope.resMsg = "Event's author will receive oyur help suggest as soos as possible! Thank You :)"
 				}
 			);
 		};

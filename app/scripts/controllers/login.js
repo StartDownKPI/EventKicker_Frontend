@@ -5,6 +5,7 @@ angular.module('ekApp')
 		$scope.login = function(){
 			if ($scope.loginForm.$valid) {
 				console.log ('Sending request');
+
 			}
 		};
 	});

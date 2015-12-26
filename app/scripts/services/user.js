@@ -2,8 +2,8 @@
 
 angular
 	.module('ekApp')
-	.factory('User', function($resource){
-		return $resource('http://localhost:3600/api/users/:id',
+	.factory('User', function($rootScope, $resource){
+		return $resource('http://77.47.204.144:80/api/users/:id',
 			 {
 				 id: '@id'
 			 },

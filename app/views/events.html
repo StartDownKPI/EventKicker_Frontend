@@ -31,7 +31,7 @@
 					<label class="control-label">sorted by: </label>
 					<select name="orderProp"
 							ng-model="order"
-							ng-init="order=orderProperties[0].value">
+							ng-init="order=orderProperties[2].value">
 						<option ng-repeat="prop in orderProperties" 
 								value="{{prop.value}}">
 							{{ prop.name }}
@@ -64,8 +64,7 @@
 						{{event.description | limitTo: 100 }}...
 					</span>
 					<div class="labels">
-						<span class="small text-muted">Author: authorName</span>
-						<span class="small text-muted">Partcipants: {{ event.participantIds.length }}</span>
+						<span class="small text-muted">Created at: {{ event.timeCreated | date:'mediumDate' }}</span>
 						<!-- <span class="small text&#45;muted">Category: {{ event.category.name }}</span> -->
 					</div>
 				</div>

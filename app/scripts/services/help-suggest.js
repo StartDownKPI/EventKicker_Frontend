@@ -2,9 +2,8 @@
 
 angular
 	.module('ekApp')
-	.factory('HelpSuggest', function($resource){
-		return $resource(
-			'http://localhost:3600/api/help-request/submit',
+	.factory('HelpSuggest', function($rootScope, $resource){
+		return $resource('http://77.47.204.144:80/api/help-request/submit',
 			{
 
 			},

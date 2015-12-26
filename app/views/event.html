@@ -34,41 +34,50 @@
 						<strong>When: </strong>
 						{{ currEvent.timeScheduled | date:'mediumDate' || 'No time yet... '}}
 					</li>
-					<li class="list-group-item">
-						<strong>Participants: </strong>
-						{{ 'No info yet' }}
-						
-					</li>
 				</ul>
 				
-				<h3>Items needed <small><a ui-sref="help({ id:currEvent.id })"> (help) </a></small></h3>
+				<h3>Items needed <small><a ui-sref="help({ id:currEvent.id })"> Help this event </a></small></h3>
 				<div class="table-responsive">
 					<table class="table table-hover">
 						<thead>
 							<tr>
 								<th>Item Name</th>
-								<th>Number</th>
-								<th>Help</th>
+								<th>Description</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>Tea</td>
-								<td>21</td>
-								<td>
-									<a href="">I can help</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Guitar</td>
-								<td>2</td>
-								<td>
-									<a href="">I can help</a>
-								</td>
+							<tr ng-repeat="item in currEventItems">
+								<td>{{ item.name }}</td>
+								<td>{{ item.description || "No description for this item..." }}</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+
+				<button ng-click="toggleNewNeededItemForm()" ng-show="!visibleNewNeededItemForm" class="btn btn-success">Add more needed items</button>
+				<form ng-show="visibleNewNeededItemForm" name="newItemForm" ng-submit="addNeededItem()">
+					<h3>Add more needed items <a ng-click="toggleNewNeededItemForm()"><small>hide</small></a></h3>
+					<div class="form-group">
+						<input class="form-control" ng-model="newNeededItem.name" type="text" name="name" placeholder="Item name" required>
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" ng-model="newNeededItem.description" cols rows="3" name="description" placeholder="(optional) Item description"></textarea>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary" value="">Add New Needed Item</button>
+					</div>
+				</form>
+
+
+				<h3>Comments</h3>
+
+				<ul class="list-group">
+					<li ng-repeat="comment in currEventComments" class="list-group-item list-group-item-success">
+					<strong>{{ comment.authorName }}</strong> on <strong>{{ comment.timeCreated|date:'mediumDate' }}</strong>
+					<p>{{ comment.content }}</p>
+					</li>
+				</ul>
 
 			</div>
 		</div>

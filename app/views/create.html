@@ -27,7 +27,7 @@
 				<label class="control-label">Date/Time</label>
 
 				<input type="datetime-local" name="eventDate" class="form-control" 
-					ng-model="newEvent.timeScheduled" required custom-focus />	
+					ng-model="timeScheduled_" required custom-focus />	
 				
 				<p class="help-block" 
 					ng-show="newEventForm.eventDate.$error.datetimelocal || newEventForm.eventDate.$error.required">
@@ -43,7 +43,7 @@
 				<label class="control-label">Description</label>
 
 				<textarea rows="5" name="eventDescr" class="form-control" 
-					ng-model="newEvent.descr" required custom-focus />	
+					ng-model="newEvent.description" required custom-focus />	
 				
 				<p class="help-block" 
 					ng-show="newEventForm.eventDescr.$invalid && newEventForm.eventDescr.$dirty && !newEventForm.eventDescr.$focused">
@@ -59,7 +59,7 @@
 				<label class="control-label">Picture</label>
 
 				<input type=file name="eventPicture" class="form-control" 
-					ng-model="newEvent.picture" required custom-focus />	
+					ng-model="newEvent.picture" custom-focus />	
 				
 				<p class="help-block" 
 					ng-show="newEventForm.eventPicture.$invalid && newEventForm.eventPicture.$dirty && !newEventForm.eventPicture.$focused">
@@ -75,6 +75,10 @@
 			</div>
 
 		</form>
+
+		<p>
+			{{ newEventErr }}
+		</p>
 	
 	</div>
 </div>

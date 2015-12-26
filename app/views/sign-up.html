@@ -2,11 +2,11 @@
 	<h2 class="text-center">Sign Up</h2>
 	<div class="col-md-6 col-md-offset-3">
 
-		<form class="form" name="loginForm" novalidate ng-submit="login()" >
+		<form class="form" name="regForm" novalidate ng-submit="reg()" >
 
 			<div class="form-group" 
-				ng-class="{ 'has-error' : loginForm.userName.$invalid && loginForm.userName.$dirty,
-							'has-success' : loginForm.userName.$valid && loginForm.userName.$dirty} ">
+				ng-class="{ 'has-error' : regForm.userName.$invalid && regForm.userName.$dirty,
+							'has-success' : regForm.userName.$valid && regForm.userName.$dirty} ">
 				
 				<label class="control-label">Name</label>
 
@@ -14,43 +14,43 @@
 					ng-model="user.name" required custom-focus />
 				
 				<p class="help-block" 
-					ng-show="loginForm.userName.$invalid && loginForm.userName.$dirty && !loginForm.userName.$focused">
+					ng-show="regForm.userName.$invalid && regForm.userName.$dirty && !regForm.userName.$focused">
 					Please, enter correct name
 				</p>
 
 			</div>
 			
 			<div class="form-group" 
-				ng-class="{ 'has-error' : loginForm.email.$invalid && loginForm.email.$dirty,
-							'has-success' : loginForm.email.$valid && loginForm.email.$dirty} ">
+				ng-class="{ 'has-error' : regForm.email.$invalid && regForm.email.$dirty,
+							'has-success' : regForm.email.$valid && regForm.email.$dirty} ">
 				
 				<label class="control-label">Email</label>
 
 				<input type="email" name="email" class="form-control" 
-					ng-model="user.email" required custom-focus />
+					ng-model="user.username" required custom-focus />
 				
 				<p class="help-block" 
-					ng-show="loginForm.email.$invalid && loginForm.email.$dirty && !loginForm.email.$focused">
+					ng-show="regForm.email.$invalid && regForm.email.$dirty && !regForm.email.$focused">
 					Please, enter correct email
 				</p>
 
 			</div>
 
 			<div class="form-group"
-				ng-class="{ 'has-error' : loginForm.password.$invalid && loginForm.password.$dirty,
-							'has-success' : loginForm.password.$valid && loginForm.password.$dirty} ">
+				ng-class="{ 'has-error' : regForm.password.$invalid && regForm.password.$dirty,
+							'has-success' : regForm.password.$valid && regForm.password.$dirty} ">
 
 				<label class="control-label">Password </label>
 				<input type="password" name="password" class="form-control"
 					ng-model="user.password" ng-minlength="8" required custom-focus />
 
 				<p class="helper-text" 
-					ng-show="loginForm.password.$error.minlength && !loginForm.password.$focused">
+					ng-show="regForm.password.$error.minlength && !regForm.password.$focused">
 					Min length - 8 characters
 				</p>
 				
 				<p class="help-block" 
-					ng-show="loginForm.password.$invalid && loginForm.password.$dirty && !loginForm.password.$focused">
+					ng-show="regForm.password.$invalid && regForm.password.$dirty && !regForm.password.$focused">
 					Please, enter correct password
 				</p>
 			
@@ -58,7 +58,7 @@
 
 			<div class="form-group">
 			
-				<button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid" >Sign Up</button>
+				<button type="submit" class="btn btn-primary" ng-disabled="regForm.$invalid" >Sign Up</button>
 			
 			</div>
 

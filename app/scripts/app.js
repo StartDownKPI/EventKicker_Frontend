@@ -69,8 +69,8 @@ angular
         controllerAs: 'about'
       });
   })
-  	.filter('num', function() {
-    	return function(input) {
-     		return parseInt(input, 10);
-    };
-});
+  .run(
+	  function ($rootScope) {
+		  $rootScope.server = "http://77.47.204.144:90";
+	  }
+  );
